@@ -1,4 +1,3 @@
-import { Mona_Sans } from "next/font/google";
 import "react-range-slider-input/dist/style.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -16,21 +15,6 @@ import "./assets/css/nice-select2.css";
 import "./assets/css/odometer-theme-default.css";
 import "./globals.scss";
 
-const bodyFont = Mona_Sans({
-	variable: "--tj-ff-body",
-	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-	style: ["normal", "italic"],
-	display: "swap",
-});
-const headingFont = Mona_Sans({
-	variable: "--tj-ff-heading",
-	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-	style: ["normal", "italic"],
-	display: "swap",
-});
-
 export const metadata = {
 	title: "Bexon - Corporate Business React NextJs Template",
 	description: "Bexon - Corporate Business React NextJs Template",
@@ -39,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" data-scroll-behavior="smooth" dir="ltr">
-			<body className={`${bodyFont.variable} ${headingFont.variable}`}>
+			<body>
 				{children}
 			</body>
 		</html>
