@@ -1,36 +1,42 @@
 import FeatureCard3 from "@/components/shared/cards/FeatureCard3";
+import CleanIcon from "@/components/shared/icons/CleanIcon";
 
 const Features3 = () => {
 	const features = [
 		{
 			id: 1,
-			title: "Experienced Dentists",
-			icon: "tji-team",
-			desc: "Our skilled dentists provide comprehensive family and cosmetic dentistry with a focus on long-term oral health and prevention.",
+			title: "Personalized Consultations",
+			iconName: "userCheck",
+			cardClass: "feature-service-card",
+			desc: "Every treatment plan starts with your goals, anatomy, and a realistic path to refined, natural-looking outcomes.",
 		},
 		{
 			id: 2,
-			title: "Advanced Dental Technology",
-			icon: "tji-innovative",
-			desc: "We use modern dental technology for precise diagnostics and efficient treatment planning in a safe, comfortable setting.",
+			title: "Advanced Aesthetic Technology",
+			iconName: "scan",
+			cardClass: "feature-service-card",
+			desc: "Medical-grade platforms support lifting, resurfacing, pigmentation correction, and regenerative skin support.",
 		},
 		{
 			id: 3,
-			title: "Gentle, Patient-Focused Care",
-			icon: "tji-support",
-			desc: "Enjoy a comfortable dental experience with a compassionate team that tailors treatments to your needs and goals.",
+			title: "Luxury Studio Experience",
+			iconName: "sparkles",
+			cardClass: "feature-service-card",
+			desc: "Patients should feel guided, comfortable, and informed from consultation through treatment and follow-up.",
 		},
 		{
 			id: 4,
-			title: "Transparent Pricing",
-			icon: "tji-budget",
-			desc: "Clear estimates and flexible options help you plan dental care with confidence and no surprises.",
+			title: "Treatment Plans with Intention",
+			iconName: "clipboardCheck",
+			cardClass: "feature-service-card",
+			desc: "Recommendations are built around long-term skin quality, facial harmony, and a measured approach to results.",
 		},
 		{
 			id: 5,
-			title: "Same-Day Emergency Visits",
-			icon: "tji-phone",
-			desc: "Urgent dental care when you need it most—same-day appointments for tooth pain, fractures, and emergencies.",
+			title: "Results That Stay Refined",
+			iconName: "shield",
+			cardClass: "feature-service-card",
+			desc: "The focus is enhancement without overcorrection, with treatment choices designed to look elevated and believable.",
 		},
 	];
 
@@ -46,21 +52,21 @@ const Features3 = () => {
 					</div>
 					<div className="col-lg-4 col-md-6 order-lg-1 order-0">
 						<div className="h4-content-wrap text-center">
-							<div className="sec-heading style-4 text-center">
+							<div className="sec-heading text-center why-choose-heading">
 								<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-									<i className="tji-box"></i>Why Choose Us
+									<CleanIcon name="sparkles" size={16} />Why Choose Us
 								</span>
 								<h2 className="sec-title title-anim">
-									Why Patients Choose Our Dental Office in [City]
+									Why Patients Choose SK/N LAB
 								</h2>
 							</div>
 							<a
 								className="tj-primary-btn wow fadeInUp"
 								data-wow-delay=".5s"
-								href="/contact/request-appointment"
+								href="/contact"
 							>
 								<span className="btn-text">
-									<span>Book Appointment</span>
+									<span>Schedule Consultation</span>
 								</span>
 								<span className="btn-icon">
 									<i className="tji-arrow-right-long"></i>

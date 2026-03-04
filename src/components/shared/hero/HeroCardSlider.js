@@ -7,8 +7,8 @@ const HeroCardSlider = () => {
 	const items = [
 		{
 			id: 1,
-			title: "Business Strategies Development",
-			img: "/images/hero/h6-hero-cart-1.webp",
+			title: "Watch the Studio Experience",
+			img: "/images/office/lab-entrance.webp",
 			videoUrl: "https://youtu.be/gXFATcwrO-U",
 		},
 	];

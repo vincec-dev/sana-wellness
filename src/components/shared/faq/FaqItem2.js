@@ -1,7 +1,9 @@
 "use client";
 
+import ButtonPrimary from "../buttons/ButtonPrimary";
+
 const FaqItem2 = ({ item = {}, idx }) => {
-	const { title, desc, initActive } = item;
+	const { title, desc, initActive, ctaText, ctaUrl } = item;
 
 	return (
 		<div className="accordion-item active wow fadeInUp" data-wow-delay=".3s">
@@ -22,6 +24,13 @@ const FaqItem2 = ({ item = {}, idx }) => {
 			>
 				<div className="accordion-body faq-text">
 					<p>{desc}</p>
+					{ctaText && ctaUrl ? (
+						<div className="pt-3">
+							<ButtonPrimary text={ctaText} url={ctaUrl} />
+						</div>
+					) : (
+						""
+					)}
 				</div>
 			</div>
 		</div>

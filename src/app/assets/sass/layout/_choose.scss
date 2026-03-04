@@ -19,7 +19,7 @@ START: Choose CSS
 	height: 100%;
 	padding: 50px 28px 45px;
 	background-color: var(--tj-color-common-white);
-	transition: all 0.4s ease-in-out;
+	transition: none;
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
@@ -39,6 +39,10 @@ START: Choose CSS
 		i {
 			line-height: 1;
 			display: inline-flex;
+		}
+		svg {
+			display: inline-flex;
+			flex: 0 0 auto;
 		}
 		@media #{$xl, $lg} {
 			margin-bottom: 30px;
@@ -66,18 +70,11 @@ START: Choose CSS
 		justify-content: flex-start;
 	}
 	&:hover {
-		background-color: var(--tj-color-theme-primary);
+		background-color: var(--tj-color-common-white);
+
 		.choose-icon {
-			color: var(--tj-color-common-white);
-			animation: gelatine 0.6s;
-		}
-		.btn-icon {
-			background-color: var(--tj-color-theme-dark);
-		}
-		.btn-text,
-		.desc,
-		.title {
-			color: var(--tj-color-common-white);
+			color: var(--tj-color-theme-primary);
+			animation: none;
 		}
 	}
 	@media #{$xl, $lg, $md} {
@@ -96,6 +93,175 @@ START: Choose CSS
 		}
 		@media #{$sm, $xs} {
 			padding: 30px 15px;
+		}
+	}
+
+	&.trust-bar-card {
+		padding: 28px;
+
+		.choose-content {
+			flex-direction: row;
+			align-items: center;
+			gap: 14px;
+		}
+
+		.choose-icon {
+			max-width: 40px;
+			font-size: 40px;
+			margin-bottom: 0;
+
+			svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.title {
+			margin-bottom: 0;
+			font-size: 18px;
+			line-height: 1.35;
+		}
+
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 28px;
+		}
+
+		@media #{$sm, $xs} {
+			.choose-content {
+				gap: 12px;
+			}
+
+			.title {
+				font-size: 17px;
+			}
+		}
+	}
+
+	&.feature-service-card {
+		padding: 28px;
+
+		.choose-icon {
+			max-width: 48px;
+			font-size: 48px;
+			margin-bottom: 16px;
+
+			svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 28px;
+		}
+	}
+
+	&.consultation-card {
+		padding: 28px;
+
+		.choose-icon {
+			max-width: 48px;
+			font-size: 48px;
+			margin-bottom: 16px;
+
+			svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		.title {
+			margin-bottom: 12px;
+		}
+
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 28px;
+		}
+	}
+
+	&.review-card {
+		padding: 28px;
+
+		.review-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 14px;
+			margin-bottom: 20px;
+		}
+
+		.review-person {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			min-width: 0;
+		}
+
+		.review-avatar {
+			width: 68px;
+			height: 68px;
+			border-radius: 50%;
+			overflow: hidden;
+			flex: 0 0 auto;
+		}
+
+		.review-meta {
+			min-width: 0;
+		}
+
+		.review-name {
+			font-size: 22px;
+			line-height: 1.15;
+			font-weight: var(--tj-fw-sbold);
+			margin-bottom: 6px;
+		}
+
+		.review-stars {
+			display: flex;
+			align-items: center;
+			gap: 2px;
+			color: #f4bf2a;
+			font-size: 16px;
+			line-height: 1;
+		}
+
+		.review-source-icon {
+			width: 38px;
+			height: 38px;
+			flex: 0 0 auto;
+		}
+
+		.review-quote {
+			font-size: 18px;
+			line-height: 1.6;
+			font-weight: var(--tj-fw-regular);
+			color: var(--tj-color-heading-primary);
+			margin-bottom: 18px;
+		}
+
+		.review-attribution {
+			font-size: 14px;
+			line-height: 1.4;
+			font-weight: var(--tj-fw-medium);
+			color: var(--tj-color-text-body);
+		}
+
+		@media #{$md, $sm, $xs} {
+			.review-head {
+				margin-bottom: 16px;
+			}
+
+			.review-name {
+				font-size: 20px;
+			}
+
+			.review-quote {
+				font-size: 17px;
+			}
+		}
+
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 28px;
 		}
 	}
 }

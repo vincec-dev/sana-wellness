@@ -36,6 +36,138 @@ START: Services CSS
 	}
 	&.service-4 {
 		background: transparent;
+		.sec-heading {
+			.sec-title {
+				margin-bottom: 12px;
+			}
+			.sub-title {
+				color: var(--tj-color-heading-primary);
+				border-color: var(--tj-color-border-1);
+			}
+		}
+	}
+}
+
+.concerns-heading {
+	.sec-title {
+		margin-bottom: 12px;
+	}
+}
+
+.before-after-heading,
+.consultation-heading,
+.reviews-heading,
+.faq-home-heading {
+	.sec-title {
+		margin-bottom: 12px;
+	}
+}
+
+.blog-home-heading {
+	.sec-title {
+		margin-bottom: 12px;
+	}
+}
+
+.before-after-gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+
+	.before-after-main-link {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.before-after-main-media {
+		overflow: hidden;
+		border-radius: 12px;
+		background-color: transparent;
+	}
+
+	.before-after-main-copy {
+		padding-top: 14px;
+	}
+
+	.before-after-main-eyebrow {
+		display: inline-block;
+		font-size: 13px;
+		font-weight: var(--tj-fw-medium);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--tj-color-text-body);
+		margin-bottom: 6px;
+	}
+
+	.before-after-main-title {
+		font-size: 24px;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+
+	.before-after-thumbs {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 14px;
+	}
+
+	.before-after-thumb {
+		padding: 0;
+		border: 0;
+		background: transparent;
+		text-align: left;
+		transition: none;
+	}
+
+	.before-after-thumb-media {
+		overflow: hidden;
+		border-radius: 12px;
+		border: 1px solid transparent;
+		background-color: transparent;
+	}
+
+	.before-after-thumb-title {
+		display: inline-block;
+		font-size: 15px;
+		font-weight: var(--tj-fw-medium);
+		line-height: 1.35;
+		color: var(--tj-color-heading-primary);
+		padding-top: 10px;
+	}
+
+	.before-after-thumb.is-active {
+		.before-after-thumb-media {
+			border-color: var(--tj-color-theme-primary);
+			box-shadow: 0 0 0 1px rgba(183, 154, 107, 0.24);
+		}
+	}
+
+	@media #{$md, $sm, $xs} {
+		.before-after-thumbs {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	@media #{$sm, $xs} {
+		.before-after-main-title {
+			font-size: 22px;
+		}
+
+		.before-after-thumbs {
+			grid-template-columns: 1fr;
+		}
+
+		.before-after-thumb {
+			display: grid;
+			grid-template-columns: 92px minmax(0, 1fr);
+			gap: 14px;
+			align-items: center;
+		}
+
+		.before-after-thumb-title {
+			padding-top: 0;
+		}
 	}
 }
 
@@ -93,6 +225,11 @@ START: Services CSS
 			display: inline-flex;
 			line-height: 1;
 		}
+		svg {
+			color: var(--tj-color-theme-primary);
+			display: inline-flex;
+			flex: 0 0 auto;
+		}
 		@media #{$sm, $xs} {
 			font-size: 50px;
 			width: 65px;
@@ -118,6 +255,98 @@ START: Services CSS
 	}
 	@media #{$sm, $xs} {
 		padding: 30px 20px;
+	}
+
+	&.style-4 {
+		padding: 28px;
+		transition: none;
+
+		.desc {
+			margin-bottom: 16px;
+
+			.service-inline-links {
+				display: block;
+				margin-top: 10px;
+
+				a {
+					display: inline-block;
+					position: relative;
+					font-weight: var(--tj-fw-sbold);
+					color: var(--tj-color-heading-primary);
+					text-decoration: none;
+					transition: none;
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -2px;
+						width: 100%;
+						height: 1px;
+						background-color: currentColor;
+						transform: scaleX(0);
+						transform-origin: left center;
+						transition: transform 0.25s ease-in-out;
+					}
+
+					&:hover {
+						color: var(--tj-color-heading-primary);
+
+						&::after {
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+		}
+
+		.service-icon {
+			width: 48px;
+			height: 48px;
+			max-width: 48px;
+			font-size: 48px;
+			background: transparent;
+			border: 0;
+			border-radius: 0;
+			margin-bottom: 16px;
+			transition: none;
+
+			svg {
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		.title,
+		.title a,
+		.desc,
+		.text-btn,
+		.text-btn .btn-text,
+		.text-btn .btn-icon {
+			transition: none;
+		}
+
+		&:hover {
+			transform: none;
+			background: var(--tj-color-common-white);
+
+			.service-icon,
+			.title,
+			.title a,
+			.desc,
+			.text-btn .btn-text {
+				color: inherit;
+				animation: none;
+			}
+
+			.text-btn .btn-icon {
+				background-color: var(--tj-color-theme-dark);
+			}
+		}
+
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 28px;
+		}
 	}
 
 	&.style-1 {
@@ -366,44 +595,27 @@ START: Services CSS
 	}
 
 	&.style-4 {
-		transition: all 0.3s ease-in-out;
+		transition: none;
 		.service-icon {
-			width: 100px;
-			height: 100px;
-			margin-bottom: 95px;
-			@media #{$lg} {
-				margin-bottom: 75px;
-			}
-			@media #{$md} {
-				width: 80px;
-				height: 80px;
-				font-size: 60px;
-				margin-bottom: 50px;
-			}
-			@media #{$sm, $xs} {
-				width: 70px;
-				height: 70px;
-				margin-bottom: 40px;
-			}
+			width: 56px;
+			height: 56px;
+			margin-bottom: 16px;
 		}
 		.title {
 			max-width: 275px;
 		}
 		&:hover {
-			background-color: var(--tj-color-theme-primary);
-			.service-icon {
-				background: var(--tj-color-common-white);
-			}
+			background-color: var(--tj-color-common-white);
 			.desc,
 			.title {
-				color: var(--tj-color-common-white);
+				color: inherit;
 				a {
-					color: var(--tj-color-common-white);
+					color: inherit;
 				}
 			}
 			.text-btn {
 				.btn-text {
-					color: var(--tj-color-common-white);
+					color: inherit;
 				}
 				.btn-icon {
 					background-color: var(--tj-color-theme-dark);

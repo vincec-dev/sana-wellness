@@ -7,22 +7,27 @@ const Hero6 = () => {
 		<section className="tj-banner-section h6-hero section-gap-x">
 			<div className="banner-area">
 				<div className="banner-left-box">
-					<div className="banner-content">
-						<h1 className="banner-title title-anim">
-							Trusted Family & Cosmetic Dentist in [City, State]
-						</h1>
-						<div className="btn-area wow fadeInUp" data-wow-delay=".8s">
+						<div className="banner-content">
+							<h1 className="banner-title title-anim">
+								Advanced Aesthetic Care in Wesley Chapel
+							</h1>
+						<div
+							className="btn-area wow fadeInUp d-flex flex-wrap gap-3"
+							data-wow-delay=".8s"
+						>
+							<ButtonPrimary text={"Schedule Appointment"} url={"/book"} />
 							<ButtonPrimary
-								text={"Book Now"}
-								url={"/contact"}
+								text={"Explore Treatments"}
+								url={"/services"}
+								className={"btn-dark"}
 							/>
 						</div>
 						<div className="h6-hero-bottom wow fadeInLeft" data-wow-delay=".9s">
 							<div className="h6-hero-history">
-								<h4 className="h6-hero-history-title">Trusted Local Care</h4>
+								<h4 className="h6-hero-history-title">Personalized Treatment Planning</h4>
 								<p className="h6-hero-history-desc">
-									Personalized dental care, modern technology, and same-day
-									appointments for patients of all ages.
+									Thoughtful consultations, advanced technology, and natural-looking
+									results tailored to your skin goals, facial balance, and comfort.
 								</p>
 							</div>
 							<div

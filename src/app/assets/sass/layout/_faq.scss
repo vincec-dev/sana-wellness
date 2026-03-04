@@ -11,6 +11,19 @@ START: Faq CSS
 		}
 	}
 
+	.sec-heading.faq-home-heading {
+		max-width: 100%;
+
+		.sec-title {
+			margin-bottom: 12px;
+		}
+
+		.sec-desc {
+			max-width: 760px;
+			margin-inline: auto;
+		}
+	}
+
 	.content-wrap .desc {
 		@media #{$md,$sm,$xs} {
 			margin-bottom: 20px;

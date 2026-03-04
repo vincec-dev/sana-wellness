@@ -1,36 +1,40 @@
+"use client";
+
 import getNavItems from "@/libs/getNavItems";
 import Link from "next/link";
+import { useState } from "react";
 import MobileMenuItem from "./MobileMenuItem";
+
+const MobileMenuList = ({ items, isTopLevel = false, depth = 0 }) => {
+	const [openKey, setOpenKey] = useState(null);
+
+	return items?.map(item => {
+		const hasChildren = Boolean(item?.submenu?.length) && depth === 0;
+		const itemKey = `${item?.path || "item"}-${item?.name || "untitled"}`;
+		const isOpen = openKey === itemKey;
+
+		return (
+			<MobileMenuItem
+				key={itemKey}
+				text={item?.name}
+				url={item?.path ? item?.path : "#"}
+				submenuClass={isTopLevel && hasChildren ? "mega-menu-service" : ""}
+				showIcon={isTopLevel}
+				isOpen={isOpen}
+				onToggle={() => setOpenKey(currentKey => (currentKey === itemKey ? null : itemKey))}
+			>
+				{hasChildren ? (
+					<MobileMenuList items={item?.submenu} depth={depth + 1} />
+				) : (
+					""
+				)}
+			</MobileMenuItem>
+		);
+	});
+};
 
 const MobileNavbar = () => {
 	const navItems = getNavItems();
-
-	const renderMobileItem = (item, options = {}) => {
-		const hasChildren = item?.submenu?.length;
-		return (
-			<MobileMenuItem
-				key={item?.path}
-				text={item?.name}
-				url={item?.path ? item?.path : "#"}
-				submenuClass={options.submenuClass}
-				showIcon={options.showIcon}
-			>
-				{hasChildren
-					? item?.submenu?.map(child =>
-							child?.submenu?.length ? (
-								renderMobileItem(child, { showIcon: false })
-							) : (
-								<li key={child?.path}>
-									<Link href={child?.path ? child?.path : "/"}>
-										{child?.name}
-									</Link>
-								</li>
-							)
-					  )
-					: ""}
-			</MobileMenuItem>
-		);
-	};
 
 	return (
 		<div className="hamburger_menu">
@@ -49,14 +53,7 @@ const MobileNavbar = () => {
 					</Link>
 					<nav className="mean-nav">
 						<ul>
-							{navItems?.map(item =>
-								renderMobileItem(item, {
-									submenuClass: item?.submenu?.length
-										? "mega-menu-service"
-										: "",
-									showIcon: true,
-								})
-							)}
+							<MobileMenuList items={navItems} isTopLevel depth={0} />
 						</ul>
 					</nav>
 				</div>

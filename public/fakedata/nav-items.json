@@ -12,112 +12,32 @@
 			{
 				"id": 1,
 				"name": "Injectables",
-				"path": "/services/injectables",
-				"submenu": [
-					{
-						"id": 1,
-						"name": "Neuromodulators",
-						"path": "/services/neuromodulators"
-					},
-					{
-						"id": 2,
-						"name": "Dermal Fillers",
-						"path": "/services/dermal-fillers"
-					},
-					{
-						"id": 3,
-						"name": "Biostimulators",
-						"path": "/services/biostimulators"
-					},
-					{
-						"id": 4,
-						"name": "PRF",
-						"path": "/services/prf"
-					}
-				]
+				"path": "/services/injectables"
 			},
 			{
 				"id": 2,
-				"name": "Skin Tightening + Lifting",
-				"path": "/services/skin-tightening-lifting",
-				"submenu": [
-					{
-						"id": 1,
-						"name": "EndyMed",
-						"path": "/services/endy-med"
-					},
-					{
-						"id": 2,
-						"name": "Morpheus8",
-						"path": "/services/morpheus8"
-					},
-					{
-						"id": 3,
-						"name": "Emface",
-						"path": "/services/emface"
-					}
-				]
+				"name": "Skin Tightening",
+				"path": "/services/skin-tightening"
 			},
 			{
 				"id": 3,
-				"name": "Laser + Light Treatments",
-				"path": "/services/laser-light-treatments",
-				"submenu": [
-					{
-						"id": 1,
-						"name": "Lumecca IPL",
-						"path": "/services/lumecca"
-					},
-					{
-						"id": 2,
-						"name": "CO2 Laser Resurfacing",
-						"path": "/services/co2-laser-resurfacing"
-					},
-					{
-						"id": 3,
-						"name": "LightWalker Laser",
-						"path": "/services/lightwalker-laser"
-					},
-					{
-						"id": 4,
-						"name": "Vasculaze",
-						"path": "/services/vasculaze"
-					}
-				]
+				"name": "Lasers",
+				"path": "/services/lasers"
 			},
 			{
 				"id": 4,
 				"name": "Hair Removal",
-				"path": "/services/hair-removal",
-				"submenu": [
-					{
-						"id": 1,
-						"name": "Diolaze Laser Hair Removal",
-						"path": "/services/diolaze-laser-hair-removal"
-					},
-					{
-						"id": 2,
-						"name": "Diolaze for Men",
-						"path": "/services/diolaze-for-men"
-					}
-				]
+				"path": "/services/hair-removal"
 			},
 			{
 				"id": 5,
-				"name": "Regenerative Treatments",
-				"path": "/services/regenerative-treatments",
-				"submenu": [
-					{
-						"id": 1,
-						"name": "PRF Microneedling",
-						"path": "/services/prf-microneedling"
-					},
-					{
-						"id": 2,
-						"name": "Exosome Therapy",
-						"path": "/services/exosome-therapy"
-					}
-				]
+				"name": "Regenerative",
+				"path": "/services/regenerative"
+			},
+			{
+				"id": 6,
+				"name": "Men's Treatments",
+				"path": "/services/mens-treatments"
 			}
 		]
 	},
@@ -128,45 +48,126 @@
 		"submenu": [
 			{
 				"id": 1,
-				"name": "Wrinkles + Fine Lines",
+				"name": "Aging + Rejuvenation",
 				"path": "/concerns/wrinkles-fine-lines"
 			},
 			{
 				"id": 2,
-				"name": "Skin Laxity + Sagging",
-				"path": "/concerns/skin-laxity"
-			},
-			{
-				"id": 3,
-				"name": "Acne Scars",
+				"name": "Skin Texture + Scarring",
 				"path": "/concerns/acne-scars"
 			},
 			{
-				"id": 4,
-				"name": "Rosacea + Redness",
+				"id": 3,
+				"name": "Tone + Redness",
 				"path": "/concerns/rosacea-redness"
 			},
 			{
+				"id": 4,
+				"name": "Facial Contour + Balance",
+				"path": "/concerns/skin-laxity-sagging"
+			},
+			{
 				"id": 5,
-				"name": "Sun Damage + Brown Spots",
-				"path": "/concerns/sun-damage-brown-spots"
-			},
-			{
-				"id": 6,
-				"name": "TMJ + Jaw Tension",
-				"path": "/concerns/tmj-jaw-tension"
-			},
-			{
-				"id": 7,
-				"name": "Razor Bumps + Ingrown Hairs",
-				"path": "/concerns/razor-bumps-ingrown-hairs"
+				"name": "Hair + Irritation",
+				"path": "/concerns/unwanted-facial-hair"
 			}
 		]
 	},
 	{
 		"id": 4,
-		"name": "Before + After",
-		"path": "/before-after"
+		"name": "Before and After",
+		"path": "/before-after",
+		"submenu": [
+			{
+				"id": 1,
+				"name": "By Treatment",
+				"path": "/before-after",
+				"submenu": [
+					{
+						"id": 1,
+						"name": "Neuromodulators",
+						"path": "/before-after/neuromodulators"
+					},
+					{
+						"id": 2,
+						"name": "Dermal Fillers",
+						"path": "/before-after/dermal-fillers"
+					},
+					{
+						"id": 3,
+						"name": "Morpheus8",
+						"path": "/before-after/morpheus8"
+					},
+					{
+						"id": 4,
+						"name": "Lumecca",
+						"path": "/before-after/lumecca"
+					},
+					{
+						"id": 5,
+						"name": "CO2 Laser",
+						"path": "/before-after/co2-laser"
+					},
+					{
+						"id": 6,
+						"name": "Diolaze",
+						"path": "/before-after/diolaze"
+					},
+					{
+						"id": 7,
+						"name": "EndyMed",
+						"path": "/before-after/endymed"
+					},
+					{
+						"id": 8,
+						"name": "Emface",
+						"path": "/before-after/emface"
+					},
+					{
+						"id": 9,
+						"name": "PRF Microneedling",
+						"path": "/before-after/prf-microneedling"
+					},
+					{
+						"id": 10,
+						"name": "Exosomes",
+						"path": "/before-after/exosomes"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "By Concern",
+				"path": "/before-after",
+				"submenu": [
+					{
+						"id": 1,
+						"name": "Aging + Rejuvenation",
+						"path": "/before-after/wrinkles-fine-lines"
+					},
+					{
+						"id": 2,
+						"name": "Skin Texture + Scarring",
+						"path": "/before-after/acne-scars"
+					},
+					{
+						"id": 3,
+						"name": "Tone + Redness",
+						"path": "/before-after/sun-damage"
+					},
+					{
+						"id": 4,
+						"name": "Facial Contour + Balance",
+						"path": "/before-after/jawline-contouring"
+					},
+					{
+						"id": 5,
+						"name": "Hair + Irritation",
+						"path": "/before-after/diolaze"
+					}
+				]
+			}
+		]
 	},
 	{
 		"id": 5,

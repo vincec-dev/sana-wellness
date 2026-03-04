@@ -115,7 +115,7 @@
 				&-pages {
 					&-single {
 						width: 315px;
-						border-inline-start: 1px solid var(--tj-color-border-1);
+						border-inline-start: 1px solid rgba(30, 26, 23, 0.08);
 						padding: 26px 30px 20px;
 
 						&:last-child,
@@ -287,7 +287,7 @@
 						content: "";
 						width: 32px;
 						height: 3px;
-						background: var(--tj-color-border-1);
+						background: rgba(30, 26, 23, 0.1);
 						bottom: 0px;
 						inset-inline-start: 0;
 					}
@@ -348,8 +348,8 @@
 	}
 	> .mega-menu-service {
 		width: 346px;
-		margin-inline-start: -25px;
-		padding: 15px 0;
+		margin-inline-start: 0;
+		padding: 0;
 		@media #{$md, $sm, $xs} {
 			width: 100%;
 			margin-inline-start: 0;
@@ -358,9 +358,13 @@
 			display: none;
 		}
 		li {
+			&:first-child {
+				a {
+					padding-top: 16px;
+				}
+			}
 			a {
-				padding: 10px 20px;
-				border-bottom: 1px solid var(--tj-color-border-1);
+				padding: 12px 18px;
 				display: block;
 				position: relative;
 				font-size: 16px;
@@ -374,11 +378,6 @@
 			&.has-dropdown {
 				> a::after {
 					display: none;
-				}
-			}
-			&:last-child {
-				a {
-					border-bottom: 0;
 				}
 			}
 		}
@@ -589,10 +588,24 @@
 		.mega-menu-service li,
 		.mega-menu-pages li {
 			@media #{$md,$sm,$xs} {
-				padding-inline-start: 0 !important;
+				padding-inline-start: 14px !important;
 			}
 			a {
-				border-bottom: 1px solid var(--tj-color-border-2);
+				border-bottom: 0;
+				color: var(--tj-color-common-white);
+				font-size: 14px;
+				font-weight: var(--tj-fw-regular);
+				position: relative;
+				padding-inline-start: 14px;
+				&::before {
+					content: "-";
+					display: inline-block;
+					position: absolute;
+					inset-inline-start: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					color: inherit;
+				}
 			}
 		}
 		.mega-menu-pages li {

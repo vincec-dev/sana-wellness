@@ -95,9 +95,9 @@ const Header = ({
 									{headerType === 4 || headerType === 6 ? (
 										<Link
 											className="header-contact d-none d-xl-inline-flex"
-											href="tel:18884521505"
+											href="tel:18136942278"
 										>
-											<span className="call-text">1-888-452-1505</span>
+											<span className="call-text">(813) 694-2278</span>
 										</Link>
 									) : headerType === 5 ? (
 										""
@@ -145,7 +145,7 @@ const Header = ({
 									)}
 									{headerType !== 5 ? (
 										<div className="header-button">
-											<ButtonPrimary text={"Schedule Consultation"} url={"/contact"} />
+											<ButtonPrimary text={"Schedule Appointment"} url={"/book"} />
 										</div>
 									) : (
 										""

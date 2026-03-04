@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 
 const MobileMenuItem = ({
 	children,
@@ -9,12 +8,10 @@ const MobileMenuItem = ({
 	url,
 	submenuClass,
 	showIcon = true,
+	isOpen = false,
+	onToggle,
 }) => {
-	const [isOpen, setIsOpen] = useState(false);
 	const hasChildren = Boolean(children);
-	const handleClick = () => {
-		setIsOpen(prevIsOpen => !prevIsOpen);
-	};
 
 	return (
 		<li className={`has-dropdown ${isOpen ? "dropdown-opened" : ""}`}>
@@ -41,7 +38,10 @@ const MobileMenuItem = ({
 					className={`mean-expand ${isOpen ? "mean-clicked" : ""}`}
 					href="#"
 					style={{ fontSize: "18px" }}
-					onClick={() => handleClick()}
+					onClick={event => {
+						event.preventDefault();
+						onToggle?.();
+					}}
 				>
 					<i className="tji-arrow-down"></i>
 				</Link>

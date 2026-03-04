@@ -38,6 +38,11 @@ START: Heading CSS
 			line-height: 1;
 			display: inline-flex;
 		}
+		svg {
+			color: var(--tj-color-theme-primary);
+			display: inline-flex;
+			flex: 0 0 auto;
+		}
 		@media #{$md, $sm, $xs} {
 			margin-bottom: 15px;
 		}
@@ -155,6 +160,11 @@ START: Heading CSS
 			font-size: 22px;
 			line-height: 1;
 			display: inline-flex;
+		}
+		svg {
+			color: var(--tj-color-theme-primary);
+			display: inline-flex;
+			flex: 0 0 auto;
 		}
 		@media #{$md, $sm, $xs} {
 			margin-bottom: 15px;

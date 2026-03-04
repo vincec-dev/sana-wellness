@@ -704,6 +704,159 @@ START: Theme Footer CSS
 .footer-bottom-area {
 	padding-bottom: 50px;
 }
+
+.tj-footer-section {
+	&.footer-4 {
+		.footer-top {
+			padding-bottom: 40px;
+		}
+
+		.footer-cta-simple {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			padding-bottom: 12px;
+			border-bottom: 1px dashed var(--tj-color-border-1);
+
+			.cta-title {
+				color: var(--tj-color-heading-primary);
+				font-size: 86px;
+				line-height: 0.95;
+				margin-bottom: 0;
+
+				@media #{$lg} {
+					font-size: 70px;
+				}
+
+				@media #{$md, $sm, $xs} {
+					font-size: 52px;
+					line-height: 1;
+				}
+			}
+		}
+
+		.footer-main-area {
+			padding-top: 60px;
+			padding-bottom: 50px;
+		}
+
+		.footer-columns-grid {
+			display: grid;
+			grid-template-columns: minmax(280px, 1.35fr) minmax(150px, 0.8fr) minmax(180px, 1fr) minmax(200px, 1fr);
+			column-gap: clamp(32px, 5vw, 84px);
+			row-gap: 32px;
+			align-items: start;
+
+			@media #{$lg} {
+				grid-template-columns: minmax(240px, 1.2fr) minmax(140px, 0.8fr) minmax(170px, 1fr) minmax(180px, 1fr);
+				column-gap: 32px;
+			}
+
+			@media #{$md} {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				column-gap: 32px;
+			}
+
+			@media #{$sm, $xs} {
+				grid-template-columns: 1fr;
+				row-gap: 28px;
+			}
+		}
+
+		.footer-column {
+			min-width: 0;
+		}
+
+		.footer-widget {
+			.title {
+				color: var(--tj-color-heading-primary);
+			}
+		}
+
+		.widget-nav-menu {
+			padding-inline-start: 0;
+
+			ul {
+				li {
+					padding: 4px 0;
+				}
+			}
+		}
+
+		.footer-contact-info {
+			.contact-item {
+				span,
+				a {
+					color: var(--tj-color-heading-primary);
+				}
+			}
+		}
+
+		.widget-contact {
+			padding-inline-start: 0;
+			margin-top: 0;
+		}
+
+		.footer-hours-list {
+			width: 100%;
+		}
+
+		.footer-hours-row {
+			display: flex;
+			justify-content: space-between;
+			gap: 12px;
+			padding: 4px 0;
+			font-size: 14px;
+			line-height: 1.4;
+			color: var(--tj-color-text-body);
+
+			span:last-child {
+				color: var(--tj-color-heading-primary);
+				font-weight: var(--tj-fw-medium);
+				text-align: right;
+			}
+		}
+	}
+}
+
+.tj-copyright-area-4 {
+	background-color: #faf7f2;
+
+	.copyright-content-area,
+	.copyright-content-area p,
+	.copyright-content-area span,
+	.copyright-content-area a {
+		color: var(--tj-color-heading-primary);
+	}
+
+	.copyright-content-area {
+		background-color: #faf7f2;
+		padding: 20px 0;
+	}
+
+	.copyright-text {
+		p,
+		a {
+			color: var(--tj-color-heading-primary);
+		}
+	}
+
+	.copyright-menu {
+		ul {
+			li {
+				a {
+					color: var(--tj-color-heading-primary);
+
+					&:hover {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+}
 .widget-subscribe-2 {
 	max-width: 850px;
 	width: 100%;

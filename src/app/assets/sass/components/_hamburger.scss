@@ -166,10 +166,10 @@
 						text-transform: capitalize;
 						padding: 18px 0;
 						border-top: none;
-						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+						border-bottom: none;
 						transition: all 0.4s ease-in-out 0s;
 						&:hover {
-							color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
 						}
 					}
 					a.mean-expand,
@@ -190,7 +190,7 @@
 							font-size: 15px;
 						}
 						&.mean-clicked {
-							color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
 							transform: rotate(180deg);
 							& i {
 								transform: rotate(180deg);
@@ -218,7 +218,7 @@
 					&.dropdown-opened {
 						> a,
 						button {
-							color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
 						}
 					}
 				}
@@ -288,8 +288,64 @@
 .hamburger_logo {
 	.mobile_logo {
 		display: inline-block;
-		max-width: 136px;
+		max-width: 165px;
 		width: 100%;
+	}
+}
+
+.hamburger-section-label {
+	color: var(--tj-color-common-white);
+	font-size: 13px;
+	line-height: 1;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 0 0 14px;
+}
+
+.hamburger-promos {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 14px;
+	margin-bottom: 32px;
+}
+
+.hamburger-promo-card {
+	display: block;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.hamburger-socials {
+	.social-links.style-3 {
+		ul {
+			li {
+				a {
+					background-color: var(--tj-color-common-white);
+					opacity: 1;
+					i {
+						color: var(--tj-color-common-black);
+					}
+					&:hover {
+						background-color: var(--tj-color-common-white);
+						opacity: 1;
+						i {
+							color: var(--tj-color-common-black);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.hamburger-promos {
+		margin-top: 20px;
+		margin-bottom: 0;
 	}
 }
 

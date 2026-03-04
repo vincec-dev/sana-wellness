@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
 
@@ -23,7 +24,13 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 						<div className="hamburger_top d-flex align-items-center justify-content-between">
 							<div className="hamburger_logo">
 								<Link href="/" className="mobile_logo">
-									<img src="/images/logos/logo-2.webp" alt="Logo" />
+									<Image
+										src="/images/logos/skn-lab-logo-white.png"
+										alt="SK/N LAB logo"
+										width={385}
+										height={81}
+										style={{ height: "auto" }}
+									/>
 								</Link>
 							</div>
 							<div className="hamburger_close">
@@ -33,32 +40,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 							</div>
 						</div>
 						<MobileNavbar />
-						<div className="hamburger-infos">
-							<h5 className="hamburger-title">Contact Info</h5>
-							<div className="contact-info">
-								<div className="contact-item">
-									<span className="subtitle">Phone</span>
-									<Link className="contact-link" href="tel:8089091313">
-										808-909-1313
-									</Link>
-								</div>
-								<div className="contact-item">
-									<span className="subtitle">Email</span>
-									<Link className="contact-link" href="mailto:info@bexon.com">
-										info@bexon.com
-									</Link>
-								</div>
-								<div className="contact-item">
-									<span className="subtitle">Location</span>
-									<span className="contact-link">
-										993 Renner Burg, West Rond, MT 94251-030
-									</span>
-								</div>
-							</div>
-						</div>
 					</div>
 					<div className="hamburger-socials">
-						<h5 className="hamburger-title">Follow Us</h5>
 						<div className="social-links style-3">
 							<ul>
 								<li>
@@ -82,6 +65,26 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 									</Link>
 								</li>
 							</ul>
+						</div>
+						<div className="hamburger-promos">
+							<Link href="/services/co2-laser-resurfacing" className="hamburger-promo-card">
+								<Image
+									src="/images/promos/cool-peel-promo.webp"
+									alt="CoolPeel promotional card"
+									width={400}
+									height={498}
+									style={{ height: "auto" }}
+								/>
+							</Link>
+							<Link href="/services/lasers" className="hamburger-promo-card">
+								<Image
+									src="/images/promos/laser-promo.webp"
+									alt="Laser treatment promotional card"
+									width={400}
+									height={505}
+									style={{ height: "auto" }}
+								/>
+							</Link>
 						</div>
 					</div>
 				</div>

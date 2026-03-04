@@ -1,12 +1,20 @@
 import Footer4 from "@/components/layout/footer/Footer4";
 import Header from "@/components/layout/header/Header";
 import Features3 from "@/components/sections/features/Features3";
+import HomeContentSections, {
+	HomeTrustBar,
+} from "@/components/sections/home/HomeContentSections";
 import Hero6 from "@/components/sections/hero/Hero6";
 import BackToTop from "@/components/shared/others/BackToTop";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Contact3 from "@/components/sections/contacts/Contact3";
 import ServicesPrimary from "@/components/sections/services/ServicesPrimary";
-import Team1 from "@/components/sections/teams/Team1";
+
+export const metadata = {
+	title: "Advanced Aesthetic Treatments in Wesley Chapel, Florida | SK:N Lab",
+	description:
+		"Explore advanced aesthetic treatments, injectables, laser services, skin tightening, and personalized wellness care in Wesley Chapel, Florida. Schedule your consultation today.",
+};
 
 export default function Home() {
 	return (
@@ -23,10 +31,11 @@ export default function Home() {
 					<main>
 						<div className="space-for-header"></div>
 						<Hero6 />
-						<Contact3 />
+						<HomeTrustBar />
 						<ServicesPrimary />
 						<Features3 />
-						<Team1 type={3} />
+						<HomeContentSections />
+						<Contact3 />
 					</main>
 					<Footer4 />
 				</div>

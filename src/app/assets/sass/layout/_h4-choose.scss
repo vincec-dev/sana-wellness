@@ -60,4 +60,17 @@ START: Choose CSS
 	}
 }
 
+.why-choose-heading {
+	max-width: 720px;
+
+	.sub-title {
+		color: var(--tj-color-heading-primary);
+		border-color: var(--tj-color-border-1);
+
+		svg {
+			color: var(--tj-color-heading-primary);
+		}
+	}
+}
+
 /* !END: Choose CSS */

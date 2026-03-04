@@ -277,7 +277,7 @@ START: Theme Header CSS
 	}
 }
 .header-bottom {
-	border-bottom: 1px dashed #c9d1d1;
+	border-bottom: 1px solid rgba(30, 26, 23, 0.08);
 }
 
 .header-wrapper {
@@ -310,7 +310,7 @@ START: Theme Header CSS
 		list-style: none;
 		display: flex;
 		align-items: center;
-		column-gap: 30px;
+		column-gap: 0;
 		flex-wrap: wrap;
 		> li {
 			position: relative;
@@ -320,35 +320,13 @@ START: Theme Header CSS
 				font-size: 16px;
 				color: var(--tj-color-heading-primary);
 				display: block;
-				padding: 37px 0;
+				padding: 37px 16px;
 				font-weight: var(--tj-fw-medium);
 				line-height: 1;
 			}
 			&.menu-item-has-children,
 			&.has-dropdown {
 				> a {
-					padding-inline-end: 18px;
-					&::after {
-						content: "";
-						width: 5px;
-						height: 5px;
-						border-radius: 999px;
-						background-color: currentColor;
-						opacity: 0;
-						position: absolute;
-						top: 50%;
-						inset-inline-end: 0;
-						transform: translateY(-50%);
-						@include transition(all 0.3s ease-in-out 0s);
-					}
-				}
-				&:hover {
-					> a {
-						&::after {
-							width: 10px;
-							opacity: 1;
-						}
-					}
 				}
 			}
 			&.current-menu-ancestor,
@@ -382,18 +360,23 @@ START: Theme Header CSS
 				opacity: 0;
 				visibility: hidden;
 				gap: 0;
-				padding: 10px 0;
+				padding: 0;
 				pointer-events: none;
 				transition: opacity 0.3s ease;
-				> li {
-					display: block;
-					width: 100%;
-					> a {
-						position: relative;
-						padding: 10px 20px;
+					> li {
 						display: block;
-						color: var(--tj-color-text-body);
-						&::before {
+						width: 100%;
+						&:first-child {
+							> a {
+								padding-top: 16px;
+							}
+						}
+						> a {
+							position: relative;
+							padding: 12px 18px;
+							display: block;
+							color: var(--tj-color-text-body);
+							&::before {
 							display: none;
 						}
 					}
@@ -412,7 +395,7 @@ START: Theme Header CSS
 								content: "";
 								position: absolute;
 								top: 50%;
-								inset-inline-end: 12px;
+								inset-inline-end: 18px;
 								transform: translateY(-50%);
 							}
 						}
@@ -437,7 +420,7 @@ START: Theme Header CSS
 
 					> .sub-menu {
 						inset-inline-start: 100%;
-						top: -10px;
+						top: -16px;
 						opacity: 0;
 						visibility: hidden;
 						pointer-events: none;
@@ -463,10 +446,15 @@ START: Theme Header CSS
 			}
 		}
 		@media #{$xl} {
-			gap: 0 22px;
+			gap: 0;
 		}
 		@media #{$lg} {
-			gap: 0 16px;
+			gap: 0;
+			> li {
+				> a {
+					padding-inline: 12px;
+				}
+			}
 		}
 	}
 }
@@ -605,10 +593,10 @@ START: Theme Header CSS
 		width: 50px;
 		height: 50px;
 		padding: 12px;
-		background: var(--tj-color-theme-primary);
+		background: var(--tj-color-common-white);
 		border-radius: 7px;
 		span {
-			background-color: var(--tj-color-common-white);
+			background-color: var(--tj-color-common-black);
 		}
 	}
 

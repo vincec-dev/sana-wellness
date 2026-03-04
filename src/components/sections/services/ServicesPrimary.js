@@ -1,49 +1,72 @@
 "use client";
 import ServiceCard4 from "@/components/shared/cards/ServiceCard4";
+import CleanIcon from "@/components/shared/icons/CleanIcon";
 
 const ServicesPrimary = () => {
 	const services = [
 		{
-			title: "General Dentistry",
-			desc: "Preventive exams, cleanings, fillings, and emergency care to keep your smile healthy and strong.",
-			path: "/services/general-dentistry",
-			iconName: "tji-service-1",
+			title: "Injectables",
+			desc: "Neuromodulators, fillers, biostimulators, and regenerative options tailored for balanced, natural-looking refinement.",
+			path: "/services/injectables",
+			iconName: "syringe",
+			subItems: [
+				{ label: "Neuromodulators", path: "/services/neuromodulators" },
+				{ label: "Dermal Fillers", path: "/services/dermal-fillers" },
+				{ label: "Biostimulators", path: "/services/biostimulators" },
+			],
 		},
 		{
-			title: "Cosmetic Dentistry",
-			desc: "Whitening, veneers, bonding, and smile makeovers designed to brighten and refine your natural look.",
-			path: "/services/cosmetic-dentistry",
-			iconName: "tji-service-2",
+			title: "Skin Tightening",
+			desc: "Non-surgical technologies designed to improve laxity, contour the lower face, and support collagen remodeling.",
+			path: "/services/skin-tightening",
+			iconName: "lift",
+			subItems: [
+				{ label: "EndyMed", path: "/services/endymed" },
+				{ label: "Morpheus8", path: "/services/morpheus8" },
+				{ label: "Emface", path: "/services/emface" },
+			],
 		},
 		{
-			title: "Restorative Dentistry",
-			desc: "Crowns, bridges, dentures, and implants that restore comfort, function, and confident chewing.",
-			path: "/services/restorative-dentistry",
-			iconName: "tji-service-3",
+			title: "Lasers",
+			desc: "Resurfacing and tone-correction options for pigmentation, redness, texture, visible vessels, and skin quality.",
+			path: "/services/lasers",
+			iconName: "laser",
+			subItems: [
+				{ label: "Lumecca", path: "/services/lumecca" },
+				{ label: "CO2 Laser", path: "/services/co2-laser-resurfacing" },
+				{ label: "LightWalker", path: "/services/lightwalker" },
+			],
 		},
 		{
-			title: "Orthodontics",
-			desc: "Clear aligners and braces to straighten teeth, improve bite alignment, and enhance long-term oral health.",
-			path: "/services/orthodontics",
-			iconName: "tji-service-4",
+			title: "Regenerative",
+			desc: "PRF, microneedling, and exosome-based options that support repair, collagen, and long-term rejuvenation.",
+			path: "/services/regenerative",
+			iconName: "droplet",
+			subItems: [
+				{ label: "Exosome Therapy", path: "/services/exosome-therapy" },
+			],
 		},
 		{
-			title: "Pediatric Dentistry",
-			desc: "Gentle, kid-friendly care focused on healthy development, cavity prevention, and positive dental visits.",
-			path: "/services/pediatric-dentistry",
-			iconName: "tji-service-5",
+			title: "Hair Removal",
+			desc: "Medical-grade laser hair reduction for smoother skin, cleaner facial lines, and less daily maintenance.",
+			path: "/services/hair-removal",
+			iconName: "razor",
+			subItems: [
+				{
+					label: "Diolaze Hair Removal",
+					path: "/services/diolaze-laser-hair-removal",
+				},
+				{ label: "Diolaze for Men", path: "/services/diolaze-for-men" },
+			],
 		},
 		{
-			title: "Gum Disease Treatment",
-			desc: "Advanced periodontal therapy, including scaling and maintenance, to protect gums and overall health.",
-			path: "/services/gum-disease-treatment",
-			iconName: "tji-service-6",
-		},
-		{
-			title: "Sedation Dentistry",
-			desc: "Safe, calming options like nitrous oxide and oral sedation for stress-free, comfortable appointments.",
-			path: "/services/sedation-dentistry",
-			iconName: "tji-support",
+			title: "Men’s Treatments",
+			desc: "Focused treatment plans for beard line refinement, razor irritation, skin quality, and performance-driven upkeep.",
+			path: "/services/mens-treatments",
+			iconName: "male",
+			subItems: [
+				{ label: "Diolaze for Men", path: "/services/diolaze-for-men" },
+			],
 		},
 	];
 
@@ -54,15 +77,12 @@ const ServicesPrimary = () => {
 					<div className="col-lg-12">
 						<div className="sec-heading style-4 text-center">
 							<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-								<i className="tji-box"></i>Our Services
+								<CleanIcon name="sparkles" size={16} />For Face, Skin and Confidence
 							</span>
-							<h2 className="sec-title title-anim">
-								Comprehensive Dental Care for Every Stage of Life
-							</h2>
+							<h2 className="sec-title title-anim">Our Aesthetic Services</h2>
 							<p className="sec-desc">
-								From preventive dentistry and emergency visits to cosmetic and
-								restorative treatments, our [City] dental office offers modern,
-								patient-focused care to keep your smile healthy and confident.
+								Explore our aesthetic services to find the right treatment for
+								you.
 							</p>
 						</div>
 					</div>
