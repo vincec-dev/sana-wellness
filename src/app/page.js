@@ -6,6 +6,7 @@ import HomeContentSections, {
 } from "@/components/sections/home/HomeContentSections";
 import Hero6 from "@/components/sections/hero/Hero6";
 import BackToTop from "@/components/shared/others/BackToTop";
+import DisablePageLinks from "@/components/shared/others/DisablePageLinks";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Contact3 from "@/components/sections/contacts/Contact3";
 import ServicesPrimary from "@/components/sections/services/ServicesPrimary";
@@ -20,6 +21,7 @@ export default function Home() {
 	return (
 		<div>
 			<BackToTop />
+			<DisablePageLinks />
 			<Header headerType={4} />
 			<Header headerType={4} isStickyHeader={true} />
 			<div
